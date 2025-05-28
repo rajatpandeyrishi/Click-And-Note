@@ -29,9 +29,10 @@ body {
   border-radius: 5px;
   padding: 15px 20px 20px;
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-
 
 /* Applies flexbox layout for various UI components to ensure consistent alignment and spacing */
 .add-box,
@@ -56,17 +57,16 @@ header,
 .add-box .icon {
   height: 78px;
   width: 78px;
-  color: #626CD6;
+  color: #626cd6;
   font-size: 40px;
   border-radius: 50%;
   justify-content: center;
-  border: 2px dashed #626CD6;
+  border: 2px dashed #626cd6;
 }
-
 
 /* Styles the text label under the add icon */
 .add-box p {
-  color: #626CD6;
+  color: #626cd6;
   font-weight: 500;
   margin-top: 20px;
 }
@@ -109,8 +109,7 @@ header,
   background: #e6e6e6;
   border-radius: 25px;
 
-
-/* Styles the note title */
+  /* Styles the note title */
 }
 .note p {
   font-size: 22px;
@@ -125,7 +124,6 @@ header,
   margin-top: 5px;
 }
 
-
 /* Adds a top border and padding to the note footer */
 .note .bottom-content {
   padding-top: 10px;
@@ -134,7 +132,7 @@ header,
 
 /* Styles the date in the note footer */
 .bottom-content span {
-  color: #6D6D6D;
+  color: #6d6d6d;
   font-size: 14px;
 }
 
@@ -145,7 +143,7 @@ header,
 
 /* Styles the settings icon */
 .bottom-content .settings i {
-  color: #6D6D6D;
+  color: #6d6d6d;
   cursor: pointer;
   font-size: 15px;
 }
@@ -267,7 +265,6 @@ header,
   font-size: 23px;
 }
 
-
 /* Adds margin to the popup form */
 .content form {
   margin: 15px 25px 35px;
@@ -318,5 +315,5 @@ form button {
   cursor: pointer;
   font-size: 17px;
   border-radius: 4px;
-  background: #626CD6;
+  background: #626cd6;
 }

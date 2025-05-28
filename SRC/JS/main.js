@@ -76,3 +76,39 @@ function showNotes() {
     addBox.insertAdjacentHTML("afterend", liTag);
   });
 }
+
+// Initial call to render notes when the page loads
+showNotes();
+
+// Displays the settings menu (edit/delete) for a specific note
+function showMenu(elem) {
+  elem.parentElement.classList.add("show"); // Shows the menu by adding the 'show' class
+  // Adds a one-time event listener to the document to close the menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (e.target.tagName != "I" || e.target != elem) {
+      elem.parentElement.classList.remove("show");
+    } // If the click is not on the same icon, hide the menu
+  });
+}
+
+// Deletes a note by its index in the notes array
+function deleteNote(noteId) {
+  let confirmDel = confirm("Are you sure you want to delete this note?"); // Asks for user confirmation
+  if (!confirmDel) return; // If user cancels, do nothing
+  notes.splice(noteId, 1); // Removes the note from the array
+  localStorage.setItem("notes", JSON.stringify(notes)); // Updates localStorage with the new notes array
+  showNotes(); // Re-renders the notes list
+}
+
+// Prepares the popup for updating an existing note
+function updateNote(noteId, title, filterDesc) {
+  // Converts <br/> tags back to newlines for the textarea
+  let description = filterDesc.replaceAll("<br/>", "\r\n");
+  updateId = noteId; // Stores the index of the note being updated
+  isUpdate = true; // Sets update mode
+  addBox.click(); // Opens the popup
+  titleTag.value = title; // Fills the title input with the note's title
+  descTag.value = description; // Fills the textarea with the note's description
+  popupTitle.innerText = "Update a Note"; // Sets the popup title for updating
+  addBtn.innerText = "Update Note"; // Sets the button text for updating
+} 
