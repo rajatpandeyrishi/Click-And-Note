@@ -33,8 +33,8 @@ let isUpdate = false,
 
 // Event listener for opening the popup to add a new note
 addBox.addEventListener("click", () => {
-  popupTitle.innerText = "Add a new Note"; // Sets the popup title for adding
-  addBtn.innerText = "Add Note"; // Sets the button text for adding
+  popupTitle.innerText = "New Note"; // Sets the popup title for adding
+  addBtn.innerText = "Done"; // Sets the button text for adding
   popupBox.classList.add("show"); // Displays the popup overlay
   document.querySelector("body").style.overflow = "hidden"; // Prevents background scrolling when popup is open
   if (window.innerWidth > 660) titleTag.focus(); // Focuses the title input on larger screens for better UX
