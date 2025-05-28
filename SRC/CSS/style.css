@@ -301,7 +301,7 @@ form :where(input, textarea):focus {
 }
 
 /* Textarea base styles for note description input */
- form .row textarea {
+form .row textarea {
   height: 150px;
   resize: none;
   padding: 12px 16px;
@@ -316,7 +316,7 @@ form :where(input, textarea):focus {
 /* Textarea focus styles to highlight active input with border and shadow */
 form .row textarea:focus {
   border: 1.5px solid #626cd6;
-  box-shadow: 0 4px 16px rgba(98, 108, 214, 0.10);
+  box-shadow: 0 4px 16px rgba(98, 108, 214, 0.1);
   background: #fff;
 }
 
@@ -331,7 +331,7 @@ form button {
   font-size: 17px;
   border-radius: 8px;
   background: linear-gradient(90deg, #626cd6 60%, #8f94fb 100%);
-  box-shadow: 0 4px 16px rgba(98, 108, 214, 0.10);
+  box-shadow: 0 4px 16px rgba(98, 108, 214, 0.1);
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: background 0.2s, box-shadow 0.2s;
@@ -341,4 +341,46 @@ form button {
 form button:hover {
   background: linear-gradient(90deg, #5058b1 60%, #626cd6 100%);
   box-shadow: 0 6px 24px rgba(98, 108, 214, 0.18);
+}
+
+/* Styles the fixed footer with a modern glassmorphism effect */
+.fixed-footer {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: rgba(98, 108, 214, 0.18); /* Semi-transparent background */
+  color: #23235b;
+  padding: 18px 36px 14px 36px;
+  border-radius: 28px;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 8px 32px rgba(98, 108, 214, 0.12); /* Soft shadow for depth */
+  z-index: 100;
+  backdrop-filter: blur(6px) saturate(1.2); /* Glass effect */
+  letter-spacing: 0.2px;
+  user-select: none;
+  border: 1.5px solid rgba(98, 108, 214, 0.18);
+}
+
+/* Arranges footer content vertically and centers it */
+.fixed-footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Removes default margin and padding from footer paragraphs */
+.fixed-footer .footer-content p {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-footer .tagline {
+  font-size: 13px;
+  color: #626cd6;
+  font-style: italic;
+  margin-top: 2px;
+  letter-spacing: 0.1px;
 }

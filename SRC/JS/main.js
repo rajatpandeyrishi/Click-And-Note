@@ -139,3 +139,11 @@ addBtn.addEventListener("click", (e) => {
     closeIcon.click(); // Closes the popup and resets fields
   }
 });
+
+// Sets the current year dynamically in the footer
+document.addEventListener("DOMContentLoaded", function () {
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
