@@ -23,6 +23,42 @@
     <link rel="stylesheet" href="SRC/CSS/style.css" />
   </head>
   <body>
+    <!-- Popup Box is used for adding or editing notes -->
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <!-- Dynamic title for popup to add note or edit note -->
+            <p></p>
+
+            <!-- Close icon to dismiss the popup -->
+            <i class="uil uil-times"></i>
+          </header>
+
+          <!-- Form for note title and description input -->
+          <form action="#">
+            <!-- action="#" prevents default form submission -->
+            <div class="row title">
+              <!-- Label for note title input -->
+              <label>Title</label>
+              <!-- Input for note title; spellcheck disabled for consistency -->
+              <input type="text" spellcheck="false" />
+            </div>
+
+            <div class="row description">
+              <!-- Label for note description input -->
+              <label>Description</label>
+              <!-- Textarea for note description; spellcheck disabled for consistency -->
+              <textarea spellcheck="false"></textarea>
+            </div>
+
+            <!-- Submit button label set dynamically via JavaScript-->
+            <button></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- Main JavaScript file for app functionality -->
     <script src="SRC/JS/main.js"></script>
   </body>
