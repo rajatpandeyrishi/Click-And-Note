@@ -1,0 +1,15 @@
+/*Imports  Poppins font from Google Fonts for consistent typography across the web-app */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Global Reset by removing default margin and padding, sets box-sizing for predictable layouts, and applies the base font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Set the background color to a smooth linear gradient for a modern, visually appealing look for the entire page */
+body {
+  background: rgb(178, 174, 216);
+}
