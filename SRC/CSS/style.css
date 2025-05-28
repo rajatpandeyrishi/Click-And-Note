@@ -13,3 +13,73 @@
 body {
   background: rgb(178, 174, 216);
 }
+
+/* Main container for notes; uses CSS Grid for responsive layout and spacing */
+.wrapper {
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, 265px);
+}
+
+/* Styles each note card with padding, rounded corners and a subtle shadow */
+.wrapper li {
+  height: 250px;
+  list-style: none;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Applies flexbox layout for various UI components to ensure consistent alignment and spacing */
+.add-box,
+.icon,
+.bottom-content,
+.popup,
+header,
+.settings .menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styles the "Add Note" box to centers content vertically and horizontally & show cursor pointer for interactivity */
+.add-box {
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Styles the plus icon inside the add box as a circular dashed border */
+.add-box .icon {
+  height: 78px;
+  width: 78px;
+  color: #626CD6;
+  font-size: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  border: 2px dashed #626CD6;
+}
+
+
+/* Styles the text label under the add icon */
+.add-box p {
+  color: #626CD6;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Arranges note content vertically with space between title/description and footer */
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Limits the height of note details and enables vertical scrolling if needed */
+.note .details {
+  max-height: 165px;
+  overflow-y: auto;
+}
