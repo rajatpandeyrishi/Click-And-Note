@@ -111,4 +111,31 @@ function updateNote(noteId, title, filterDesc) {
   descTag.value = description; // Fills the textarea with the note's description
   popupTitle.innerText = "Update a Note"; // Sets the popup title for updating
   addBtn.innerText = "Update Note"; // Sets the button text for updating
-} 
+}
+
+// Handles adding a new note or updating an existing one when the form button is clicked
+addBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevents the default form submission behavior
+  let title = titleTag.value.trim(), // Gets and trims the title input value
+    description = descTag.value.trim(); // Gets and trims the description textarea value
+
+  // Only proceed if at least one field is filled
+  if (title || description) {
+    let currentDate = new Date(), // Gets the current date
+      month = months[currentDate.getMonth()], // Gets the current month name
+      day = currentDate.getDate(), // Gets the current day of the month
+      year = currentDate.getFullYear(); // Gets the current year
+
+    // Creates a note object with title, description, and formatted date
+    let noteInfo = { title, description, date: `${month} ${day}, ${year}` };
+    if (!isUpdate) {
+      notes.push(noteInfo); // Adds the new note to the array
+    } else {
+      isUpdate = false; // Resets update mode
+      notes[updateId] = noteInfo; // Updates the existing note in the array
+    }
+    localStorage.setItem("notes", JSON.stringify(notes)); // Saves the updated notes array to localStorage
+    showNotes(); // Re-renders the notes list
+    closeIcon.click(); // Closes the popup and resets fields
+  }
+});
