@@ -83,3 +83,116 @@ header,
   max-height: 165px;
   overflow-y: auto;
 }
+
+/* Shows scrollbars on hover for better UX */
+.note .details::-webkit-scrollbar,
+.popup textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Show scrollbar on hover */
+.note .details:hover::-webkit-scrollbar,
+.popup textarea:hover::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Styles the scrollbar track on hover */
+.note .details:hover::-webkit-scrollbar-track,
+.popup textarea:hover::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+/* Styles the scrollbar thumb on hover */
+.note .details:hover::-webkit-scrollbar-thumb,
+.popup textarea:hover::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+  border-radius: 25px;
+
+
+/* Styles the note title */
+}
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Styles the note description */
+.note span {
+  display: block;
+  color: #575757;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+
+/* Adds a top border and padding to the note footer */
+.note .bottom-content {
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Styles the date in the note footer */
+.bottom-content span {
+  color: #6D6D6D;
+  font-size: 14px;
+}
+
+/* Positions the settings menu relative to its parent */
+.bottom-content .settings {
+  position: relative;
+}
+
+/* Styles the settings icon */
+.bottom-content .settings i {
+  color: #6D6D6D;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Styles the dropdown menu for note actions (edit/delete) and hides it by default */
+.settings .menu {
+  z-index: 1;
+  bottom: 0;
+  right: -5px;
+  padding: 5px 0;
+  background: #fff;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: bottom right;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+/* Shows the dropdown menu when the parent has the 'show' class */
+.settings.show .menu {
+  transform: scale(1);
+}
+
+/* Styles each menu item in the dropdown */
+.settings .menu li {
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 0;
+  justify-content: flex-start;
+}
+
+/* Removes margin from the last menu item */
+.menu li:last-child {
+  margin-bottom: 0;
+}
+
+/* Adds a hover effect to menu items */
+.menu li:hover {
+  background: #f5f5f5;
+}
+
+/* Adds spacing between the icon and text in menu items */
+.menu li i {
+  padding-right: 8px;
+}
