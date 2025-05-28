@@ -377,10 +377,68 @@ form button:hover {
   padding: 0;
 }
 
+/* Styles the tagline with a distinct color and italic font */
 .fixed-footer .tagline {
   font-size: 13px;
   color: #626cd6;
   font-style: italic;
   margin-top: 2px;
   letter-spacing: 0.1px;
+}
+
+/* Responsive styles for tablets and below */
+@media (max-width: 900px) {
+  .wrapper {
+    margin: 30px 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 18px;
+  }
+  .fixed-footer {
+    padding: 14px 18px 10px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 12px 2px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .add-box .icon {
+    height: 60px;
+    width: 60px;
+    font-size: 28px;
+  }
+  .add-box p {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .note {
+    min-width: 0;
+    padding: 10px 8px 12px;
+  }
+  .note p {
+    font-size: 18px;
+  }
+  .note span {
+    font-size: 14px;
+  }
+  .fixed-footer {
+    left: 50%;
+    bottom: 10px;
+    padding: 10px 8px 8px 8px;
+    font-size: 12px;
+    border-radius: 18px;
+  }
+  .popup-box .popup {
+    max-width: 98vw;
+    width: 98vw;
+  }
+  .content header,
+  .content form {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
