@@ -15,15 +15,18 @@ Click-And-Note is a modern, responsive web application for effortless note-takin
 
 ```
 Click-And-Note/
-├── index.html
-├── README.md
-└── SRC/
-    ├── CSS/
-    │   └── style.css
-    ├── Image/
-    │   └── favicon-note.svg
-    └── JS/
-        └── main.js
+│
+├── SRC/
+│   ├── CSS/
+│   │   └── style.css          # Main stylesheet for layout and styling
+│   ├── Image/
+│   │   └── favicon-note.svg   # Custom favicon for the app
+│   └── JS/
+│       └── main.js            # Core JavaScript file for interactivity
+│
+├── index.html                 # Main HTML file linking all components
+└── README.md                  # Project overview and setup 
+
 ```
 
 - `index.html`: Main HTML file for the app UI.
@@ -50,6 +53,10 @@ Click-And-Note/
 - JavaScript (ES6)
 - [Unicons](https://iconscout.com/unicons)
 - [Poppins Google Font](https://fonts.google.com/specimen/Poppins)
+
+## Click And Note Live Demo 
+
+- Link: https://clickandnote.netlify.app/ 
 
 ## License
 
